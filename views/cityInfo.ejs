@@ -1,0 +1,10 @@
+<%- include('header'); %>
+
+<div class="row">
+    <h1><%= foundCity.name %> <small>(<%= foundCity.state %>)</small></h1>
+    <h4>Total Population of <%= foundCity.name %> is <%= foundCity.population %>. </h4>
+    <p><%= foundCity.information %></p>
+    <img class="city-image" src=<%= foundCity.imageURL %> alt="">
+</div>
+
+<%- include('footer'); %>

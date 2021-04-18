@@ -1,0 +1,22 @@
+<%- include('header'); %>
+
+<div class="add-city">
+    <h1>Add City</h1>
+    <form action="/add" method="post">
+        <div class="form-group">
+            <label>City</label><br>
+            <input class="form-control" type="text" name="cityName" required>
+            <label>State</label><br>
+            <input class="form-control" type="text" name="stateName" required>
+            <label>Population</label><br>
+            <input class="form-control" type="text" name="cityPopulation" required>
+            <label>Image URL</label><br>
+            <input class="form-control" type="text" name="imageUrl" required>
+            <label>Description</label><br>
+            <textarea class="form-control" name="description" cols="30" rows="4"></textarea required><br>
+            <button class="btn btn-primary" type="submit">Publish</button>
+        </div>
+    </form>
+</div>
+
+
