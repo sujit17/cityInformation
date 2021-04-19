@@ -1,7 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
-// const _ = require("lodash");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -10,9 +9,9 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// mongodb+srv://admin-sujit:0017@city.6yd7q.mongodb.net/cityInformation
 
-mongoose.connect("mongodb://localhost:27017/CityDB", {
+// mongodb://localhost:27017/CityDB
+mongoose.connect("mongodb+srv://admin-sujit:0017@city.6yd7q.mongodb.net/cityInformation?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -61,7 +60,6 @@ app.post("/city", (req, res) => {
     },
     (err, foundCity) => {
       if (foundCity) {
-        console.log(foundCity);
         res.render("cityInfo", {
           foundCity: foundCity,
         });
